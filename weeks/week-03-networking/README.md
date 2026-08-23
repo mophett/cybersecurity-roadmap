@@ -1,8 +1,10 @@
-# Networking I — Fundamentals
+# Week 03 — Networking I
+
+## Overview
 
 This week focused on the fundamentals of computer networking and how devices communicate with each other.
 
-The goal was to understand the basic structure of a network, how devices are identified, how traffic moves between networks, and how a Linux system represents its network configuration.
+The goal was to understand how devices are connected, how they are identified, how traffic moves between networks, and how Linux represents and manages network configuration.
 
 ---
 
@@ -10,7 +12,7 @@ The goal was to understand the basic structure of a network, how devices are ide
 
 ### Network Fundamentals
 
-* What computer networks are
+* Computer networks
 * LAN
 * WAN
 * Internet
@@ -37,7 +39,7 @@ The goal was to understand the basic structure of a network, how devices are ide
 * Loopback
 * Network interfaces
 
-### Subnetting
+### Subnetting and CIDR
 
 * Subnets
 * Subnet masks
@@ -47,9 +49,10 @@ The goal was to understand the basic structure of a network, how devices are ide
 * `/24`
 * `/32`
 * Number of addresses in a subnet
-* Basic binary representation of IP addresses
+* Binary representation of IPv4 addresses
+* Binary AND
 
-### Routing
+### Routing and NAT
 
 * Default gateway
 * Routing
@@ -91,7 +94,7 @@ Used to inspect the local neighbor table.
 
 ### `ping`
 
-Used to test network connectivity and observe basic ICMP communication.
+Used to test network connectivity.
 
 ### `traceroute`
 
@@ -107,7 +110,7 @@ Used to inspect network sockets and connections.
 
 I practiced analyzing my own local network and identifying the role of each component.
 
-The basic communication path was represented as:
+A simplified communication path was represented as:
 
 ```text
 Laptop
@@ -119,7 +122,7 @@ ISP
 Internet
 ```
 
-I used Linux networking tools to inspect the local configuration and understand how the system connects to the network.
+I used Linux networking tools to inspect the local configuration and understand how the device connects to the local network, gateway, ISP, and Internet.
 
 ---
 
@@ -131,9 +134,10 @@ I practiced working with:
 * subnet masks;
 * CIDR notation;
 * powers of two;
+* binary AND;
 * calculating the number of addresses in a subnet.
 
-The goal was to understand what a subnet represents rather than simply memorizing CIDR values.
+The goal was to understand what a subnet represents and how the subnet mask determines the network and host portions of an IPv4 address.
 
 ---
 
@@ -142,12 +146,16 @@ The goal was to understand what a subnet represents rather than simply memorizin
 After this week, I can explain:
 
 * what a LAN and WAN are;
+* the role of a NIC;
 * the difference between a MAC address and an IP address;
 * the difference between IPv4 and IPv6;
 * what private and public IP addresses are;
 * what a loopback address is;
 * what a subnet is;
 * what CIDR notation represents;
+* what `/8`, `/16`, `/24`, and `/32` mean;
+* how subnet masks are used;
+* how binary AND relates to subnetting;
 * what a default gateway does;
 * what a routing table contains;
 * how NAT fits into typical home networking;
@@ -172,7 +180,10 @@ Internet
 ## Tools Used
 
 ```text
-ip
+ip addr
+ip link
+ip route
+ip neigh
 ping
 traceroute
 ss
@@ -183,7 +194,7 @@ ss
 ## Progress
 
 **Duration:** 1 week
-**Focus:** Networking fundamentals, addressing, subnetting, and routing
+**Focus:** Networking fundamentals, addressing, subnetting, routing, and Linux network configuration
 **Status:** DONE
 
 The next stage is to move from networking fundamentals to protocol-level communication and packet analysis.
