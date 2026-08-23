@@ -1,227 +1,189 @@
-# Networking
+# Networking I — Fundamentals
 
-This section documents my networking studies, which were split into **two weeks of focused learning and hands-on practice**.
+This week focused on the fundamentals of computer networking and how devices communicate with each other.
 
-The first week covered the fundamentals of computer networking and how devices communicate. The second week focused on deeper protocol behavior, addressing, ports, sockets, DNS, DHCP, and practical packet analysis.
+The goal was to understand the basic structure of a network, how devices are identified, how traffic moves between networks, and how a Linux system represents its network configuration.
 
 ---
 
-## Week 1 — Networking Fundamentals
+## Topics Studied
 
-### Topics Studied
+### Network Fundamentals
 
-* What computer networks are and how they work
-* LAN, WAN, and the Internet
+* What computer networks are
+* LAN
+* WAN
+* Internet
 * Client-server communication
-* Network devices:
+* Network interfaces
+* NIC
+* Ethernet
 
-  * Router
-  * Switch
-  * Modem
-  * Access Point
+### Network Devices
+
+* Router
+* Switch
+* Modem
+* Access Point
+
+### Addressing
+
 * MAC addresses
 * IP addresses
 * IPv4
 * IPv6
-* Subnets and subnet masks
-* Default gateway
-* Private and public IP addresses
-* Loopback address
+* Private IP addresses
+* Public IP addresses
+* Loopback
 * Network interfaces
-* Basic routing concepts
 
-### Practical Work
+### Subnetting
 
-Worked with network configuration and diagnostics using Linux tools:
+* Subnets
+* Subnet masks
+* CIDR
+* `/8`
+* `/16`
+* `/24`
+* `/32`
+* Number of addresses in a subnet
+* Basic binary representation of IP addresses
 
-```bash
-ip addr
-ip route
-ping
+### Routing
+
+* Default gateway
+* Routing
+* Routing tables
+* How packets move between networks
+* NAT
+
+### Private IPv4 Ranges
+
+Studied the standard private IPv4 ranges:
+
+```text
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
 ```
-
-Learned how to inspect interfaces, identify IP addresses, check routing information, and test connectivity.
 
 ---
 
-## Week 2 — Networks II
+## Linux Networking Tools
 
-The second week focused on the protocols and mechanisms that control communication between hosts.
+Practiced using Linux networking utilities to inspect the system and troubleshoot connectivity.
 
-### ARP
+### `ip addr`
 
-Learned:
+Used to inspect network interfaces and assigned IP addresses.
 
-* What ARP does
-* IP-to-MAC address resolution
-* ARP requests and replies
-* Local network communication
-* ARP cache
+### `ip link`
 
-### ICMP
+Used to inspect network interfaces and their link state.
 
-Learned:
+### `ip route`
 
-* Purpose of ICMP
-* Echo Request / Echo Reply
-* How `ping` uses ICMP
-* Basic error and diagnostic messages
+Used to inspect the routing table and default gateway.
 
-### TCP
+### `ip neigh`
 
-Studied TCP in detail:
+Used to inspect the local neighbor table.
 
-* TCP connection establishment
-* Three-way handshake
+### `ping`
 
-```text
-SYN → SYN/ACK → ACK
-```
+Used to test network connectivity and observe basic ICMP communication.
 
-* Source port
-* Destination port
-* Ephemeral ports
-* Sequence numbers
-* Acknowledgement numbers
-* Retransmission
-* TCP flags:
+### `traceroute`
 
-  * SYN
-  * ACK
-  * FIN
-  * RST
-  * PSH
+Used to examine the path traffic takes through a network.
 
-Practiced observing TCP traffic with `tcpdump` and `netcat`.
+### `ss`
 
-Example:
+Used to inspect network sockets and connections.
 
-```bash
-nc -l 4444
-```
+---
 
-```bash
-sudo tcpdump -i lo -nn tcp port 4444
-```
+## Practical Work
 
-This helped connect the theory of TCP with real packets and understand how sequence and acknowledgement numbers change during communication.
+I practiced analyzing my own local network and identifying the role of each component.
 
-### UDP
-
-Learned:
-
-* How UDP differs from TCP
-* Connectionless communication
-* Datagram-based transmission
-* Lack of handshake
-* No built-in retransmission
-* Use cases for UDP
-
-### DNS
-
-Studied how domain names are translated into IP addresses.
-
-Learned:
-
-* DNS resolver
-* DNS queries and responses
-* A records
-* AAAA records
-* UDP port `53`
-* TCP port `53`
-* Recursive DNS resolution
-
-Practiced with:
-
-```bash
-dig example.com
-dig AAAA example.com
-dig @1.1.1.1 example.com
-```
-
-### DHCP
-
-Learned how hosts automatically obtain network configuration.
-
-Studied the DORA process:
+The basic communication path was represented as:
 
 ```text
-Discover → Offer → Request → Acknowledge
+Laptop
+   ↓
+Router
+   ↓
+ISP
+   ↓
+Internet
 ```
 
-Learned the role of DHCP in assigning:
+I used Linux networking tools to inspect the local configuration and understand how the system connects to the network.
 
-* IP address
-* Subnet mask
-* Default gateway
-* DNS servers
+---
 
-### Ports and Sockets
+## Subnetting Practice
 
-Learned:
+I practiced working with:
 
-* Port range: `0–65535`
-* Well-known ports
-* Registered ports
-* Ephemeral ports
-* Source and destination ports
-* Sockets
+* binary representation of IPv4 addresses;
+* subnet masks;
+* CIDR notation;
+* powers of two;
+* calculating the number of addresses in a subnet.
 
-A socket can be understood as an endpoint identified by an IP address and port.
+The goal was to understand what a subnet represents rather than simply memorizing CIDR values.
+
+---
+
+## What I Can Explain
+
+After this week, I can explain:
+
+* what a LAN and WAN are;
+* the difference between a MAC address and an IP address;
+* the difference between IPv4 and IPv6;
+* what private and public IP addresses are;
+* what a loopback address is;
+* what a subnet is;
+* what CIDR notation represents;
+* what a default gateway does;
+* what a routing table contains;
+* how NAT fits into typical home networking;
+* how a Linux system represents its network configuration.
+
+A simplified view of the network path is:
+
+```text
+Device
+  ↓
+Local Network
+  ↓
+Router / Gateway
+  ↓
+ISP
+  ↓
+Internet
+```
 
 ---
 
 ## Tools Used
 
-During the two weeks I practiced networking with:
-
 ```text
 ip
 ping
+traceroute
 ss
-tcpdump
-Wireshark
-dig
-host
-nslookup
-curl
-nc (netcat)
 ```
-
----
-
-## What I Can Explain Now
-
-After these two weeks, I can follow the basic path of network communication and explain what happens at different stages.
-
-For example, when accessing a website, I can reason about:
-
-```text
-Domain Name
-     ↓
-DNS Resolution
-     ↓
-IP Address
-     ↓
-Routing
-     ↓
-ARP / Neighbor Resolution
-     ↓
-TCP Connection
-     ↓
-Ports / Sockets
-     ↓
-Application Communication
-```
-
-I can also inspect real network traffic and connect packet fields with the underlying protocol behavior.
 
 ---
 
 ## Progress
 
-**Duration:** 2 weeks
-**Focus:** Networking fundamentals + network protocols
+**Duration:** 1 week
+**Focus:** Networking fundamentals, addressing, subnetting, and routing
 **Status:** DONE
 
-The next stage is to continue from networking fundamentals toward **web technologies, security, and practical security analysis**.
+The next stage is to move from networking fundamentals to protocol-level communication and packet analysis.
