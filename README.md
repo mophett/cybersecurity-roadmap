@@ -2,26 +2,28 @@
 
 This repository documents my cybersecurity learning journey.
 
-The goal is to build a strong foundation in computer systems, Linux, networking, programming, and cybersecurity through hands-on practice. As I progress, this repository will grow with completed weekly summaries, scripts, projects, and technical writeups.
+The goal is to build a strong foundation in computer systems, Linux, networking, programming, and cybersecurity through hands-on practice.
+
+As I progress, this repository will grow with completed weekly summaries and practical projects.
 
 ---
 
 ## Roadmap
 
-| Week | Topic | Status |
-|------|-------------------------------|------|
-| 01 | Computer Fundamentals | DONE |
-| 02 | Linux | DONE |
-| 03 | Networking | DONE |
-| 04 | Python | IP |
-| 05 | Web Fundamentals | NS |
-| 06 | Bash & Git | NS |
-| 07 | DNS, TLS & Cryptography | NS |
-| 08 | Security Fundamentals | NS |
-| 09 | Linux Security | NS |
-| 10 | Security Tools | NS |
-| 11 | Practical Security | NS |
-| 12 | Final Review | NS |
+| Week | Topic                   | Status |
+| ---- | ----------------------- | ------ |
+| 01   | Computer Fundamentals   | DONE   |
+| 02   | Linux                   | DONE   |
+| 03   | Networking I            | DONE   |
+| 04   | Networking II           | DONE   |
+| 05   | Python                  | IP     |
+| 06   | Python + Bash + Git     | NS     |
+| 07   | Web Fundamentals        | NS     |
+| 08   | DNS, TLS & Cryptography | NS     |
+| 09   | Security Fundamentals   | NS     |
+| 10   | Security Tools          | NS     |
+| 11   | Linux Security          | NS     |
+| 12   | Final Review            | NS     |
 
 ---
 
@@ -30,31 +32,25 @@ The goal is to build a strong foundation in computer systems, Linux, networking,
 ```text
 .
 ├── weeks/
-├── projects/
-├── scripts/
-└── writeups/
+└── projects/
 ```
 
 ### weeks
 
-Contains weekly summaries of the learning roadmap.
+Contains weekly summaries and documentation from the cybersecurity learning roadmap.
+
+Each completed week contains the topics studied, practical exercises, tools used, and key takeaways.
 
 ### projects
 
-Contains practical cybersecurity and programming projects.
+Contains practical cybersecurity and programming projects created during the learning process.
 
-### scripts
-
-Contains automation and utility scripts written during the learning process.
-
-### writeups
-
-Contains technical writeups, walkthroughs, and notes from practical exercises.
+Projects are kept in the same repository to document hands-on work and provide evidence of practical experience.
 
 ---
 
 ## Status Legend
 
-- **NS** — Not Started
-- **IP** — In Progress
-- **DONE** — Completed
+* **NS** — Not Started
+* **IP** — In Progress
+* **DONE** — Completed
