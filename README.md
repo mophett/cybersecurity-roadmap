@@ -12,8 +12,8 @@ The goal is to build a strong foundation in computer systems, Linux, networking,
 |------|-------------------------------|------|
 | 01 | Computer Fundamentals | DONE |
 | 02 | Linux | DONE |
-| 03 | Networking | NS |
-| 04 | Python | NS |
+| 03 | Networking | DONE |
+| 04 | Python | IP |
 | 05 | Web Fundamentals | NS |
 | 06 | Bash & Git | NS |
 | 07 | DNS, TLS & Cryptography | NS |
