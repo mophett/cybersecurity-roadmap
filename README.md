@@ -16,8 +16,8 @@ As I progress, this repository will grow with completed weekly summaries and pra
 | 02   | Linux                   | DONE   |
 | 03   | Networking I            | DONE   |
 | 04   | Networking II           | DONE   |
-| 05   | Python                  | IP     |
-| 06   | Python + Bash + Git     | NS     |
+| 05   | Python                  | DONE     |
+| 06   | Python + Bash + Git     | IP     |
 | 07   | Web Fundamentals        | NS     |
 | 08   | DNS, TLS & Cryptography | NS     |
 | 09   | Security Fundamentals   | NS     |
