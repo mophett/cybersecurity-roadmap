@@ -1,0 +1,20 @@
+2026-09-04 14:01:12 INFO User admin logged in from 192.168.1.10
+2026-09-04 14:02:44 INFO User alice logged in from 10.0.0.25
+2026-09-04 14:03:17 WARNING Failed login attempt for user admin from 8.8.8.8
+2026-09-04 14:04:02 ERROR Authentication failed for user admin from 8.8.8.8
+2026-09-04 14:05:31 INFO User bob logged out from 192.168.1.42
+2026-09-04 14:06:09 ERROR Database connection failed from 10.0.0.15
+2026-09-04 14:07:55 WARNING Suspicious request from 203.0.113.45
+2026-09-04 14:08:21 INFO User alice requested /dashboard from 10.0.0.25
+2026-09-04 14:09:48 ERROR Connection timeout from 198.51.100.23
+2026-09-04 14:10:13 INFO User admin accessed /admin from 192.168.1.10
+2026-09-04 14:11:37 WARNING Unusual traffic detected from 203.0.113.45
+2026-09-04 14:12:05 INFO User bob logged in from 172.16.0.5
+2026-09-04 14:13:29 ERROR Permission denied for user bob from 172.16.0.5
+2026-09-04 14:14:44 INFO User alice downloaded report from 10.0.0.25
+2026-09-04 14:15:18 WARNING Multiple failed requests from 198.51.100.23
+2026-09-04 14:16:02 ERROR Authentication failed for user guest from 203.0.113.99
+2026-09-04 14:17:41 INFO User admin logged out from 192.168.1.10
+2026-09-04 14:18:33 ERROR Service unavailable from 10.0.0.15
+2026-09-04 14:19:27 WARNING Suspicious connection from 8.8.8.8
+2026-09-04 14:20:51 INFO User bob accessed /profile from 172.16.0.5
